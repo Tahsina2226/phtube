@@ -68,15 +68,24 @@ const displayVideos = (videos) => {
         card.classList = "card card-compact";
 
         card.innerHTML = `
-        <figure>
+        <figure class="h-[200px]">
     <img src="${videos.thumbnail}
+    class="h-full w-full object-cover"
       alt="Shoes" />
-  </figure>
-  <div class="card-body">
-    <h2 class="card-title">Shoes!</h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
-    <div class="card-actions justify-end">
-      <button class="btn btn-primary">Buy Now</button>
+  </figure ]">
+  <div class="px-0 py-2 flex gap-2">
+  <div>
+    <img class="w-10 h-10 rounded-full object-cover" src=${videos.authors[0].profile_picture}/>
+  </div>
+    <div>
+        <h2 class=font-bold>${videos.title}</h2>
+       <div>
+         <p>${videos.authors[0].profile_name}</p>
+         <img src="https://fontawesome.com/icons/badge-check?f=sharp&s=regular"/>
+
+       </div>
+    </div>
+    
     </div>
   </div>
     
